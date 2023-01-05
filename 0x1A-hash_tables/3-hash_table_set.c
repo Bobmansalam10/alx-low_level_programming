@@ -27,13 +27,6 @@ hash_node_t *make_hash_node(const char *key, const char *value)
 		free(node);
 		return (NULL);
 	}
-	node->value = strdup(value);
-	if (node->value == NULL)
-	{
-		free(node->key);
-		free(node);
-		return (NULL);
-	}
 	node->next = NULL;
 	return (node);
 }
